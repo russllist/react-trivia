@@ -39,9 +39,10 @@
   width: 200px;
   border-radius: 5px;
   border-color: blue;
-  background-color:green;
+  /* background-color:green; */
 }
 
+.game {background-color: pink;}
 .read-the-docs {
   color: #888;
 }
