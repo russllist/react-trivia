@@ -37,12 +37,17 @@
   /* padding: 2em; */
   height: 50px;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 10px;
   border-color: blue;
-  /* background-color:green; */
+  cursor: pointer;
 }
 
-.game {background-color: pink;}
+.game {
+  background-color: pink;
+display: flex;
+flex-direction: column;
+}
+
 .read-the-docs {
   color: #888;
 }

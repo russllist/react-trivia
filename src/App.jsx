@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import GameBoard from './GameBoard.jsx';
+import Game from './Game.jsx';
+import SplashScreen from './SplashScreen.jsx';
 
 let triviaQuestions = [
   {
@@ -121,52 +122,34 @@ let triviaQuestions = [
   },
 ];
 
-// function Game() {
-//   const [questionNum, setQuestionNum] = useState(0);
-
-//   function handleClickNext() {
-//     if (questionNum < triviaQuestions.length - 1) {
-//       setQuestionNum(questionNum + 1);
-//     }
-//   }
-
-//   function handleClickPrev() {
-//     if (questionNum > 0) {
-//       setQuestionNum(questionNum - 1);
-//     }
-//   }
-
-//   return (
-//     <>
-//       <div className="game">
-//         <div className="question">
-//           <h3>{triviaQuestions[questionNum].question}</h3>
-//         </div>
-//         <div>
-//           {triviaQuestions[questionNum].answers.map((answer) => (
-//             <Card
-//               key={answer}
-//               answer={answer}
-//               correct={triviaQuestions[questionNum].correct}
-//             />
-//           ))}
-//         </div>
-//         <div>
-//           <button onClick={handleClickPrev}>Previous</button>
-//           <button onClick={handleClickNext}>Next</button>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
+function GameOver({ score }) {
+  return (
+    <>
+      <div>
+        <h2>Game Over!</h2>
+        <p>You scored {score} out of number questions</p>
+      </div>
+    </>
+  );
+}
 
 function App() {
+  const [screen, setScreen] = useState('splash');
+
+  function changeScreen(newScreen) {
+    setScreen(newScreen);
+  }
+
   return (
     <>
       <div className="gameTitle">
         <h2>Totally Trivial Trivia</h2>
       </div>
-      <GameBoard questions={triviaQuestions} />
+      <div>
+        {screen == 'splash' && <SplashScreen handleClickBegin={changeScreen} />}
+        {screen == 'game' && <Game questions={triviaQuestions} />}
+        {screen == 'gameOver' && <GameOver score={10} />}
+      </div>
     </>
   );
 }

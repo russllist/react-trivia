@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Card({ answer, correct }) {
+function Card({ answer, correct, addScore }) {
   const [content, setContent] = useState(answer);
   const [tileColor, setTileColor] = useState('lightblue');
 
@@ -8,6 +8,7 @@ function Card({ answer, correct }) {
     if (answer === correct) {
       setContent('Correct!');
       setTileColor('green');
+      addScore();
     } else {
       setContent('Wrongo!');
       setTileColor('red');
