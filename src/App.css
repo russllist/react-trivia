@@ -48,8 +48,10 @@ button{
   margin: 10px;
 }
 
-#score{
+.counter{
   margin:0.5em auto;
-  width: 8em;
-  background-color: #EEF4ED;
+  height: 1.5em;
+  width: 7em;
+  background-color: lightgray;
+  border-radius: 10px;
 }

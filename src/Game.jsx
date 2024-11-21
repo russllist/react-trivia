@@ -76,9 +76,7 @@ function Game({ questions }) {
             <button onClick={handleClickPrev}>Previous</button>
             <button onClick={handleClickNext}>Next</button>
           </div>
-          <div className="counter">
-            <p id="score">Score: {score}</p>
-          </div>
+          <div className="counter">Score: {score}</div>
         </div>
       )}
       {screen == 'gameOver' && (

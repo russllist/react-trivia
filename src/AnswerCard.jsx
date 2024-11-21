@@ -24,7 +24,7 @@ function Card({ answer, correct, addScore }) {
           backgroundColor: tileColor,
         }}
       >
-        <p>{content}</p>
+        {content}
       </div>
     </>
   );
