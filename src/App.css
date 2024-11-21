@@ -13,9 +13,9 @@
   border-radius: 10px;
 }
 
-.game {
+.gameArea {
   width: 500px;
-  background-color: #246EB9;
+  background-color: #3688db;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ button{
 .counter{
   margin:0.5em auto;
   height: 1.5em;
-  width: 7em;
+  width: 40%;
   background-color: lightgray;
   border-radius: 10px;
 }

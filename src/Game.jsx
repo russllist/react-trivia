@@ -7,7 +7,7 @@ function SplashScreen({ handleClickBegin }) {
   }
 
   return (
-    <div>
+    <div className="gameArea">
       <h3>Test your knowledge in this multiple choice quiz!</h3>
       <button onClick={handleClick}>Begin</button>
     </div>
@@ -17,9 +17,9 @@ function SplashScreen({ handleClickBegin }) {
 function GameOver({ score, total }) {
   return (
     <>
-      <div>
+      <div className="gameArea">
         <h2>Game Over!</h2>
-        <p>
+        <p className="counter">
           You scored {score} out of {total}
         </p>
       </div>
@@ -58,7 +58,7 @@ function Game({ questions }) {
     <>
       {screen == 'splash' && <SplashScreen handleClickBegin={changeScreen} />}
       {screen == 'game' && (
-        <div className="game">
+        <div className="gameArea">
           <div>
             <h3 className="question">{questions[questionNum].question}</h3>
           </div>
