@@ -2,16 +2,16 @@ import { useState } from 'react';
 
 function Card({ answer, correct, addScore }) {
   const [content, setContent] = useState(answer);
-  const [tileColor, setTileColor] = useState('lightblue');
+  const [tileColor, setTileColor] = useState('#FDFFFC');
 
   function handleClick() {
-    if (answer === correct) {
+    if (answer == correct) {
       setContent('Correct!');
-      setTileColor('green');
+      setTileColor('#4CB944');
       addScore();
     } else {
       setContent('Wrongo!');
-      setTileColor('red');
+      setTileColor('#F06543');
     }
   }
 

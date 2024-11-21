@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import Game from './Game.jsx';
-import SplashScreen from './SplashScreen.jsx';
 
 let triviaQuestions = [
   {
@@ -122,33 +121,14 @@ let triviaQuestions = [
   },
 ];
 
-function GameOver({ score }) {
-  return (
-    <>
-      <div>
-        <h2>Game Over!</h2>
-        <p>You scored {score} out of number questions</p>
-      </div>
-    </>
-  );
-}
-
 function App() {
-  const [screen, setScreen] = useState('splash');
-
-  function changeScreen(newScreen) {
-    setScreen(newScreen);
-  }
-
   return (
     <>
       <div className="gameTitle">
-        <h2>Totally Trivial Trivia</h2>
+        <h2>Totally Trivial Trivia Game</h2>
       </div>
       <div>
-        {screen == 'splash' && <SplashScreen handleClickBegin={changeScreen} />}
-        {screen == 'game' && <Game questions={triviaQuestions} />}
-        {screen == 'gameOver' && <GameOver score={10} />}
+        <Game questions={triviaQuestions} />
       </div>
     </>
   );

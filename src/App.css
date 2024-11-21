@@ -5,61 +5,49 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.answercard {
-  /* padding: 2em; */
-  height: 50px;
-  width: 200px;
+.gameTitle {
+  height: 5em;
+  width: 500px;
+  background-color: #F5EE9E;
+  margin: 0.5em auto;
   border-radius: 10px;
-  border-color: blue;
-  cursor: pointer;
 }
 
 .game {
-  background-color: pink;
-display: flex;
-flex-direction: column;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-h1 {
-  background-color:whitesmoke;
+  width: 500px;
+  background-color: #246EB9;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
   
 }
 
-.gameTitle {
-  height: 100px;
-  width: 500px;
-  background-color: rgb(96, 96, 221);
+.question {
+  margin: 5px 5px;
+  padding: 0.25em;
+  height: 3em;
+  word-wrap: normal;
+  background-color: #9ecff5;
   border-radius: 10px;
+}
+
+.answercard {
+  height: 50px;
+  width: 200px;
+  margin: .75em auto;
+  border-radius: 10px;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.answercard:hover{
+  filter: drop-shadow(0 0 .5em white);
+}
+
+button{
+  margin: 10px;
+}
+
+p{
+  vertical-align:middle;
 }
