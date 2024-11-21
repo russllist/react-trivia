@@ -41,13 +41,15 @@
 }
 
 .answercard:hover{
-  filter: drop-shadow(0 0 .5em white);
+  filter: drop-shadow(0 0 .5em #EEF4ED);
 }
 
 button{
   margin: 10px;
 }
 
-p{
-  vertical-align:middle;
+#score{
+  margin:0.5em auto;
+  width: 8em;
+  background-color: #EEF4ED;
 }

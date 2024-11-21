@@ -77,7 +77,7 @@ function Game({ questions }) {
             <button onClick={handleClickNext}>Next</button>
           </div>
           <div className="counter">
-            <p>Score: {score}</p>
+            <p id="score">Score: {score}</p>
           </div>
         </div>
       )}
